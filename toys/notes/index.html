@@ -1,0 +1,177 @@
+<html>
+
+<head>
+  <title>Note-Naming Game</title>
+  <style>
+    body {
+      text-align: center;
+      background: #b3c5cf;
+      color: black;
+      padding-top:20px;
+      font-family:Georgia, 'Times New Roman', Times, serif;
+    }
+    button {
+      background-color:blueviolet;
+      color:white;
+      font-size:1.7em;
+      border: 0px;
+      padding:18px;
+      border-radius:15px;
+      text-transform: uppercase;
+      font-weight:bold;
+      font-family:'Courier New', Courier, monospace;
+    }
+    button:hover {
+      background-color:orchid;
+      color:white;
+    }
+    h1,h2,h3,h4,h5,h6 {
+      font-weight:normal;
+    }
+    #timer {
+      font-family: 'Courier New', Courier, monospace;
+      font-size:x-large;
+      font-weight: bold;
+      padding:10px;
+      border-radius:15px;
+      background-color:darkred;
+      color:white;
+      visibility:hidden;
+      margin:0 10px;
+    }
+    #score {
+      font-family: 'Courier New', Courier, monospace;
+      font-size:x-large;
+      font-weight: bold;
+      padding:10px;
+      border-radius:15px;
+      background-color:darkgreen;
+      color:white;
+      visibility:hidden;
+      margin:0 10px;
+    }
+    #shown {
+      font-family: 'Courier New', Courier, monospace;
+      font-size:x-large;
+      font-weight: bold;
+      padding:10px;
+      border-radius:15px;
+      background-color:darkblue;
+      color:white;
+      visibility:hidden;
+      margin:0 10px;
+    }
+    #note {
+      max-height:30%;
+      margin-bottom:20px;
+    }
+    button.start {
+      width:12%;
+      max-width:100px;
+      margin:3px;
+      padding:12px;
+      min-height:2.2em;
+    }
+    #noteButtons button {
+      width:12%;
+      max-width:100px;
+      margin:3px;
+      color:black;
+      padding:12px;
+      min-height:2.2em;
+    }
+    #noteButtons button.flat {
+      background-color:palegreen;
+    }
+    #noteButtons button.natural {
+      background-color: aquamarine;
+    }
+    #noteButtons button.sharp {
+      background-color: lightsalmon;
+    }
+    #noteButtons button.flat:hover {
+      background-color:green;
+      color:white;
+    }
+    #noteButtons button.natural:hover {
+      background-color: darkcyan;
+      color:white;
+    }
+    #noteButtons button.sharp:hover {
+      background-color:darkred;
+      color:white;
+    }
+
+
+  </style>
+  <script src="script.js"></script>
+</head>
+<body>
+  <div id="headd" style="height:90px;"></div>
+  <h1 id="header">Note-Naming Game</h1>
+  <br height="100px" />
+
+  <!-- <hr width="300px" style="margin:50px auto" /> -->
+
+  <!-- <button type="button" onclick="startGame()" id="start">Start the Game</button> -->
+  <div id="start">
+    <p class="start">Select the number of seconds below.</p>
+    <button class="start" type="button" onclick="startGame(5)">5</button>
+    <button class="start" type="button" onclick="startGame(10)">10</button>
+    <button class="start" type="button" onclick="startGame(30)">30</button>
+    <button class="start" type="button" onclick="startGame(60)">60</button>
+    <button class="start" type="button" onclick="startGame(120)">120</button>
+    <button class="start" type="button" onclick="startGame(240)">240</button>
+    <button class="start" type="button" onclick="startGame(480)">480</button>
+  </div>
+
+  <p id="infoBox">
+    <span id="timer"></span>
+    <span id="brk1" style="display:none;">&nbsp;&nbsp;&nbsp;</span>
+    <span id="score"></span>
+    <span id="brk2" style="display:none;">&nbsp;&nbsp;&nbsp;</span>
+    <span id="shown"></span>
+  </p>
+
+  <img src="images/a1/b1.png" id="note" style="display:none;"  />
+
+  <div id="noteButtons" style="display:none;">
+    <button class="sharp" type="button" onclick="check('a','s')">A&#9839;</button>
+    <button class="sharp" type="button" onclick="check('b','s')">B&#9839;</button>
+    <button class="sharp" type="button" onclick="check('c','s')">C&#9839;</button>
+    <button class="sharp" type="button" onclick="check('d','s')">D&#9839;</button>
+    <button class="sharp" type="button" onclick="check('e','s')">E&#9839;</button>
+    <button class="sharp" type="button" onclick="check('f','s')">F&#9839;</button>
+    <button class="sharp" type="button" onclick="check('g','s')">G&#9839;</button>
+    <br />
+    <button class="natural" type="button" onclick="check('a','n')">A</button>
+    <button class="natural" type="button" onclick="check('b','n')">B</button>
+    <button class="natural" type="button" onclick="check('c','n')">C</button>
+    <button class="natural" type="button" onclick="check('d','n')">D</button>
+    <button class="natural" type="button" onclick="check('e','n')">E</button>
+    <button class="natural" type="button" onclick="check('f','n')">F</button>
+    <button class="natural" type="button" onclick="check('g','n')">G</button>
+    <br />
+    <button class="flat" type="button" onclick="check('a','b')">A&#9837;</button>
+    <button class="flat" type="button" onclick="check('b','b')">B&#9837;</button>
+    <button class="flat" type="button" onclick="check('c','b')">C&#9837;</button>
+    <button class="flat" type="button" onclick="check('d','b')">D&#9837;</button>
+    <button class="flat" type="button" onclick="check('e','b')">E&#9837;</button>
+    <button class="flat" type="button" onclick="check('f','b')">F&#9837;</button>
+    <button class="flat" type="button" onclick="check('g','b')">G&#9837;</button>
+    <br />
+  </div>
+  <br />
+  <br />
+  <h2>Rules</h2>
+  <p>You must click the note as it is written. <br />For instance, if the note displayed
+    is an F&#9837;, you cannot click E. <br />Instead, you must click F&#9837;. <br />Get as
+    many correct notes as you can before time runs out.<br />Gain a point for a right note.
+    <br />Lose a point for a wrong note.
+  </p>
+
+  <br />
+  <div style="height:300px;display:block;"/>
+</body>
+
+</html>

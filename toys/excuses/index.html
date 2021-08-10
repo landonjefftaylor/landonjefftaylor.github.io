@@ -1,0 +1,65 @@
+<html>
+
+<head>
+  <title>Introvert's Friend</title>
+  <style>
+    body {
+      text-align: center;
+      background: #132b38;
+      color: white;
+      padding-top:90px;
+      font-family:Georgia, 'Times New Roman', Times, serif;
+    }
+    button {
+      background-color:aquamarine;
+      font-size:1.7em;
+      border: 0px;
+      padding:18px;
+      border-radius:15px;
+      text-transform: uppercase;
+      font-weight:bold;
+      font-family:'Courier New', Courier, monospace;
+    }
+    button:hover {
+      background-color:blueviolet;
+      color:white;
+    }
+    h1,h2,h3,h4,h5,h6 {
+      font-weight:normal;
+    }
+    #excuse {
+      color:aquamarine;
+      font-weight: bold;
+      font-size:x-large;
+    }
+    #x1 {
+      color:pink;
+    }
+    #x2 {
+      color:aquamarine;
+    }
+    #x3 {
+      color:lightblue;
+    }
+  </style>
+  <script src="script.js"></script>
+</head>
+<body>
+  <h1>Introvert's Friend</h1>
+  <h2>Efficient Excuse Generator</h2>
+  <br height="100px" />
+
+  <!-- <hr width="300px" style="margin:50px auto" /> -->
+
+  <button type="button" onclick="makeExcuse()">Do a thing</button>
+
+  <p>&uarr; click to start &uarr;</p>
+
+  <p id="excuse">
+    <span id="x1">intro</span><span style="color:white"> + </span>
+    <span id="x2">scapegoat</span><span style="color:white"> + </span>
+    <span id="x3">excuse</span>
+  </p>
+</body>
+
+</html>
