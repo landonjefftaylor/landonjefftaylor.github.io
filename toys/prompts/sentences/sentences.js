@@ -6229,6 +6229,5 @@ const s = [
 	"School Section Lake National Wildlife Refuge is a National Wildlife Refuge in Rolette County, North Dakota. It is managed under J. Clark Salyer National Wildlife Refuge.",
 	"The race was first run in 2007.",
 	"Sir Keith Grahame Feiling OBE (7 September 1884 &ndash; 16 September 1977) was a British historian, biographer and academic. He was",
-	"An automatic trip is an action performed by some system, usually a Safety Instrumented System, Programmable Logic Controller, or Distributed Control System, to put an industrial process into a safe state.",
-
+	"An automatic trip is an action performed by some system, usually a Safety Instrumented System, Programmable Logic Controller, or Distributed Control System, to put an industrial process into a safe state."
 	]
