@@ -1,0 +1,69 @@
+<html>
+
+<head>
+  <title>Extra, Extra!</title>
+  <style>
+    body {
+      text-align: center;
+      background: #353133;
+      color: white;
+      padding-top:90px;
+      font-family:Georgia, 'Times New Roman', Times, serif;
+    }
+    button {
+      background-color:rgb(70, 197, 87);
+      font-size:1.7em;
+      border: 0px;
+      padding:18px;
+      border-radius:15px;
+      text-transform: uppercase;
+      font-weight:bold;
+      font-family:'Courier New', Courier, monospace;
+    }
+    button:hover {
+      background-color:rgb(73, 114, 85);
+      color:white;
+    }
+    h1,h2,h3,h4,h5,h6 {
+      font-weight:normal;
+    }
+    #headline {
+      color:aquamarine;
+      font-weight: bold;
+      font-size:x-large;
+    }
+    #x0 {
+      color:rgb(245, 136, 117);
+    }
+    #x1 {
+      color:rgb(255, 244, 179);
+    }
+    #x2 {
+      color:aquamarine;
+    }
+    #x3 {
+      color:lightblue;
+    }
+  </style>
+  <script src="script.js"></script>
+</head>
+<body>
+  <h1>Extra, Extra!</h1>
+  <h2>News Headline Generator</h2>
+  <br height="100px" />
+
+  <!-- <hr width="300px" style="margin:50px auto" /> -->
+
+  <button type="button" onclick="makeHeadline()">Do a thing</button>
+
+  <p>&uarr; click to start &uarr;</p>
+
+  <p id="headline">
+    <span id="x0">intro</span><span style="color:white"> + </span>
+    <span id="x1">subject</span><span style="color:white"> + </span>
+    <span id="x2">verb</span><span style="color:white"> + </span>
+    <span id="x3">object</span>
+  </p>
+</body>
+
+</html>
