@@ -6230,20 +6230,61 @@ const s = [
 	"The race was first run in 2007.",
 	"Sir Keith Grahame Feiling OBE (7 September 1884 &ndash; 16 September 1977) was a British historian, biographer and academic. He was",
 	"An automatic trip is an action performed by some system, usually a Safety Instrumented System, Programmable Logic Controller, or Distributed Control System, to put an industrial process into a safe state."
-	]
+]
 
-  function getSentence() {
+var secondsLeft = 0;
+var playing = false;
 
-    console.log("getSentence")
+var good = new Audio('good.mp3');
+var bad = new Audio('bad.mp3');
+var warn = new Audio('warn.mp3');
 
-    var i = s[~~(Math.random() * s.length)]
-    // var i2 = scape[~~(Math.random() * scape.length)]
-    // var i3 = excus[~~(Math.random() * excus.length)]
-    
-    // var outstring = i;
-    // var outstring = intro[i1] + " " + scape[i2] + " " + excus[i3] + ".";
-  
-    console.log(i)
-    document.getElementById("sentence").innerHTML = i;
-  
+function startTime(mins) {
+  secondsLeft = mins * 60;
+  // document.getElementById("timer").style = "visibility:visible";
+  document.getElementById("start").style = "display:none";
+  good.play();
+  runTimer();
+}
+
+function runTimer() {
+  document.getElementById("timer").innerHTML = secondsLeft + " seconds remain";
+  secondsLeft--;
+  if (secondsLeft < 0) {
+    playing = false;
+    bad.play();
+    document.getElementById("bod").style = "background-color:darkred;";
+    // document.getElementById("timer").innerHTML = roundTime + "-SECOND ROUND";
+    // document.getElementById("shown").innerHTML = notesShown + " NOTES SHOWN";
+    // document.getElementById("brk1").style = "display:block;margin-top:2em;";
+    // document.getElementById("brk2").style = "display:block;margin-top:2em;";
+    // document.getElementById("shown").style = "visibility:visible";
+    // document.getElementById("note").style = "display:none";
+    // document.getElementById("noteButtons").style = "display:none";
+    // document.getElementById("score").style = "visibility:visible;font-size:5em;";
+    setTimeout(showStart, 1500);
   }
+  else {
+    setTimeout(runTimer, 1000);
+  }
+}
+
+function showStart() {
+  document.getElementById("start").style = "display:block;";
+}
+
+function getSentence() {
+
+  console.log("getSentence")
+
+  var i = s[~~(Math.random() * s.length)]
+  // var i2 = scape[~~(Math.random() * scape.length)]
+  // var i3 = excus[~~(Math.random() * excus.length)]
+  
+  // var outstring = i;
+  // var outstring = intro[i1] + " " + scape[i2] + " " + excus[i3] + ".";
+
+  console.log(i)
+  document.getElementById("sentence").innerHTML = i;
+
+}
