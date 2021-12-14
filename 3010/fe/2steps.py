@@ -21,6 +21,8 @@ dist = [[0]*16 for _ in range(16)]
 
 for v in vertices:
   for i in range(0,16):
+    if vertices.index(v) == i:
+      continue
     if i in v:
       dist[int(vertices.index(v))][i] = 1
       print("dist[" + str(vertices.index(v)) + "][" + str(i) + "] = 1")
@@ -37,7 +39,15 @@ for v in vertices:
       dist[int(vertices.index(v))][i] = 9
   print(dist)
 
+dist[0] = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+for i in range(16):
+  dist[i][0] = i
+
 print(dist)
 
 with open('2steps.txt', 'w') as wr:
-  wr.write(str(dist))
+  wr.write(str(dist) + "\n")
+  for line in dist:
+    for item in line:
+      wr.write(str(item) + " & ")
+    wr.write("\\\\\n")
