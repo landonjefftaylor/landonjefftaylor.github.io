@@ -1,7 +1,7 @@
 vertices = [
   [0],
   [2,15,14,9], #1
-  [1,12,15,3], #2
+  [1,12,6,3], #2
   [2,4,8,13], #3
   [3,12,14,5], #4
   [4,13,9,6], #5
@@ -17,19 +17,25 @@ vertices = [
   [10,14,13,1], #15
 ]
 
-dist = [[0] * 16] * 16
+dist = [[0]*16 for _ in range(16)]
 
 for v in vertices:
-  for i in range(1,16):
+  for i in range(0,16):
     if i in v:
-      dist[vertices.index(v)][i] = 1
+      dist[int(vertices.index(v))][i] = 1
+      print("dist[" + str(vertices.index(v)) + "][" + str(i) + "] = 1")
       continue
-    for j in vertices[i]:
+    for j in v:
+      print(str(v) + "->" + str(vertices[j]))
       if i in vertices[j]:
-        dist[vertices.index(v)][i] = 2
+        print("i (" + str(i) + ") in vertices[" + str(j) + "]")
+        dist[int(vertices.index(v))][i] = 2
+        print("dist[" + str(vertices.index(v)) + "][" + str(i) + "] = 2")
         break
     if dist[vertices.index(v)][i] == 0:
-      dist[vertices.index(v)][i] = 9
+      print("dist[" + str(vertices.index(v)) + "][" + str(i) + "] = 9")
+      dist[int(vertices.index(v))][i] = 9
+  print(dist)
 
 print(dist)
 
