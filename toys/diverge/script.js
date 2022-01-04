@@ -79,7 +79,7 @@ function getSentence() {
   
   document.getElementById("bod").style = "background-color:darkblue;";
   
-  startTime(30);
+  startTime(65);
   
   console.log("getSentence");
 
