@@ -10,8 +10,8 @@ var playing = false;
 
 var warn = new Audio('warn.mp3');
 
-function startTime(mins) {
-  secondsLeft = mins * 60;
+function startTime(secs) {
+  secondsLeft = secs;
   document.getElementById("start").style = "display:none";
   runTimer();
 }
@@ -39,7 +39,7 @@ function getSentence() {
   
   document.getElementById("bod").style = "background-color:darkblue;";
   
-  startTime(5);
+  startTime(30);
   
   console.log("getSentence");
 
