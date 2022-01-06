@@ -1,0 +1,101 @@
+/* Open Sans */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+body {
+  background-image: url("bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#clock h1 {
+  text-align: center;
+  font-size: 135pt;
+  margin: 0;
+  padding: 0;
+  line-height: 135pt;
+  font-weight: 600;
+  text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5), 0px 0px 17px #000000;
+}
+
+#clock {
+  margin: 200px 0 0 0;
+}
+
+#greeting h1 {
+  text-align: center;
+  font-size: 35pt;
+  margin: 0;
+  padding: 0;
+  line-height: 35pt;
+  font-weight: 400;
+  text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5), 0px 0px 7px #000000;
+}
+
+#greeting {
+  margin: 18px 0 0 0;
+}
+
+#timer h1 {
+  text-align: center;
+  font-size: 35pt;
+  margin: 0;
+  padding: 0;
+  line-height: 35pt;
+  font-weight: 600;
+  text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5), 0px 0px 7px #000000;
+}
+
+#timer {
+  margin: 80px 0 0 0;
+}
+
+#task {
+  font-weight: 300 !important;
+}
+
+#controls {
+  margin: 140px auto;
+  text-align:center;
+  max-width:100%;
+}
+
+#controls button {
+  font-size: 20pt;
+  padding: 10px 20px;
+  color:white;
+  border-radius: 10px;
+  border: 4px solid white;
+  margin: 0 30px;
+  text-align: center;
+  /* visibility: hidden; */
+}
+
+#controls button:hover {
+  border: 4px solid rgb(245, 61, 61);
+}
+
+#controls button#start {
+  background-color: #334059;
+}
+
+#controls button#next {
+  background-color: #334059;
+}
+
+#controls button#pause {
+  background-color: #606421;
+}
+
+#controls button#end {
+  background-color: #5e2a26;
+}
