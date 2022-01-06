@@ -1,8 +1,48 @@
 const s = [
 	"a hammer",
-  "nails",
-  "a paper clip",
-  "an umbrella"
+ 	"nails",
+  	"a paper clip",
+	"an umbrella",
+	"a mirror",
+	"a notebook",
+	"a stapler",
+	"a brick",
+	"pencil shavings",
+	"a can of beans",
+	"a rowboat",
+	"a pinecone",
+	"a sunflower",
+	"a pizza",
+	"a disco ball",
+	"an ice cream cone",
+	"a glass bottle",
+	"a paper cup",
+	"a party hat",
+	"a dozen eggs",
+	"a pocket knife",
+	"a flute",
+	"a bookmark",
+	"a button",
+	"a sandal",
+	"a folding chair",
+	"an eraser",
+	"a remote control",
+	"a dollar bill",
+	"a lamp shade",
+	"headphones",
+	"a DVD",
+	"sand paper",
+	"a sword",
+	"a branch",
+	"a wooden spoon",
+	"a bandana",
+	"a soda can",
+	"a cork",
+	"a clamp",
+	"a wall clock",
+	"a spring",
+	"a beaded bracelet",
+	"a drill press"
 ]
 
 var secondsLeft = 0;
@@ -10,8 +50,8 @@ var playing = false;
 
 var warn = new Audio('warn.mp3');
 
-function startTime(mins) {
-  secondsLeft = mins * 60;
+function startTime(secs) {
+  secondsLeft = secs;
   document.getElementById("start").style = "display:none";
   runTimer();
 }
@@ -39,7 +79,7 @@ function getSentence() {
   
   document.getElementById("bod").style = "background-color:darkblue;";
   
-  startTime(5);
+  startTime(65);
   
   console.log("getSentence");
 
