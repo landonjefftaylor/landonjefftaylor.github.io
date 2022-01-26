@@ -46,19 +46,19 @@ function resume() {
 function work() {
   document.getElementById('task').innerHTML = "Time to Focus";
   document.getElementById('body').style.backgroundImage="url(darkmode.png)";
-  setTimer(0,3);
+  setTimer(27,0);
 }
 
 function shortBreak() {
   document.getElementById('task').innerHTML = "Take a short break";
   document.getElementById('body').style.backgroundImage="url(green.jpg)";
-  setTimer(0,3);
+  setTimer(3,0);
 }
 
 function longBreak() {
   document.getElementById('task').innerHTML = "Take a long break";
   document.getElementById('body').style.backgroundImage="url(green.jpg)";
-  setTimer(0,3);
+  setTimer(10,0);
 }
 
 function startTasks() {
