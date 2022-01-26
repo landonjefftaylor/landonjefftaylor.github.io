@@ -8,7 +8,7 @@ html, body {
 }
 
 body {
-  background-image: url("bg.jpg");
+  /* background-image: url("bg.jpg"); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -92,7 +92,15 @@ body {
   background-color: #334059;
 }
 
+#controls button#skip {
+  background-color: #5e2164;
+}
+
 #controls button#pause {
+  background-color: #606421;
+}
+
+#controls button#resume {
   background-color: #606421;
 }
 

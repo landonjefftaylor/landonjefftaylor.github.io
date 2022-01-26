@@ -1,8 +1,9 @@
 window.onload = init;
 
 function init() {
-  startButtons();
   startTime();
+  setBG();
+  startButtons();
 }
 
 function startTime() {
@@ -36,8 +37,12 @@ function startTime() {
 function startButtons() {
   document.getElementById('start').style.display = "inline-block";
   document.getElementById('pause').style.display = "none";
+  document.getElementById('resume').style.display = "none";
   document.getElementById('end').style.display = "none";
   document.getElementById('next').style.display = "none";
-  document.getElementById('tim').style.display = "none";
-  document.getElementById('task').style.display = "none";
+  document.getElementById('timer').style.display = "none";
+}
+
+function setBG() {
+  document.getElementById('body').style.backgroundImage="url(bg.jpg)";
 }
