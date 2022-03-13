@@ -1,2 +1,3 @@
-# site
-The website of mine at landonjtaylor.net
+# Routine Manager
+
+By editing index.html and routines.js you can customize the routines.
