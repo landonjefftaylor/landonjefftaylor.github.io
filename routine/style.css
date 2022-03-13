@@ -274,6 +274,7 @@ h1#task {
   text-align: center;
   margin-bottom:1em;
   font-size:6em;
+  margin-top:1em;
 }
 button#complete {
   background-color:#428062;
@@ -291,7 +292,7 @@ button#skip {
   color:white;
   border-radius: 3px;
   font-size: 1.7em;
-  padding:0.5em;
+  padding:0.9em;
   width: 100%;
   margin: 1em 0;
 }
@@ -301,4 +302,9 @@ p#taskList {
 .done {
   text-decoration: line-through;
   color:#67af8c;
+}
+
+#controls {
+  display:block;
+  margin: 8em 0;
 }
