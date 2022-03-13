@@ -218,7 +218,7 @@ function complete() {
   // console.log(currentTask);
   currentSet[currentTask] = '<span class="done">' + currentSet[currentTask] + "</span>";
   currentTask++;
-  if (currentTask >= currentSet.length) {
+  if (currentTask >= currentSet.length || secondLoop) {
     checkDone();
   }
   printTasks();
