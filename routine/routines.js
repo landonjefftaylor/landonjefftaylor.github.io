@@ -188,7 +188,7 @@ function printTasks() {
   var todolist = "";
   var donelist = "";
   for (const element of currentSet) {
-    if (element.includes('<span class="done">')) {
+    if (element.includes('<span class="done"')) {
       donelist += (element + "<br />");
     }
     else {
@@ -202,7 +202,7 @@ function printTasks() {
 function checkDone() {
   secondLoop = false;
   for (i=0; i<currentSet.length; i++) {
-    if (!currentSet[i].includes('<span class="done">')) {
+    if (!currentSet[i].includes('<span class="done"')) {
       secondLoop = true;
       currentTask = i;
       break;
