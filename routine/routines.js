@@ -227,7 +227,17 @@ function complete() {
 function skip() {
   // console.log(currentTask);
   currentTask++;
-  if (currentTask >= currentSet.length) {
+  if (currentTask >= currentSet.length || secondLoop) {
+    checkDone();
+  }
+  printTasks();
+}
+
+function disregard() {
+  // console.log(currentTask);
+  currentSet[currentTask] = '<span class="done" style="color:#b78080;">' + currentSet[currentTask] + "</span>";
+  currentTask++;
+  if (currentTask >= currentSet.length || secondLoop) {
     checkDone();
   }
   printTasks();
