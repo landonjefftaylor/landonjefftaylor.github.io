@@ -139,6 +139,21 @@ var saturday = [
   "Mop hard floors"
 ];
 
+var cooking = [
+  "Defrost food as needed",
+  "Clear kitchen surfaces",
+  "Find a recipe",
+  "Collect all ingredients",
+  "Collect cooking tools",
+  "Preheat the oven if needed",
+  "Prep any preppable ingredients",
+  "Preheat pans if needed",
+  "Clear prep equipment",
+  "Cook according to recipe",
+  "Clear cooking items from table",
+  "Serve food and eat"
+];
+
 let currentSetStr = "";
 let currentSet = fullset;
 let currentTask = 0;
@@ -173,6 +188,9 @@ function startTasks() {
       break;
     case "?saturday": 
       currentSet = saturday;
+      break;
+    case "?cook": 
+      currentSet = cook;
       break;
     default:
       alert("Set not found. Check the URL. Doing a full task set.");
