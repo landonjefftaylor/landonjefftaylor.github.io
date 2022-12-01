@@ -1,0 +1,85 @@
+/** General CSS **/
+
+body {
+    text-align: center;
+    background: #353133;
+    color: white;
+    padding-top:90px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+button {
+    background-color:rgb(70, 197, 87);
+    font-size:1.7em;
+    border: 0px;
+    padding:18px;
+    border-radius:15px;
+    text-transform: uppercase;
+    font-weight:bold;
+    font-family:'Courier New', Courier, monospace;
+}
+button:hover {
+    background-color:rgb(73, 114, 85);
+    color:white;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight:normal;
+}
+#headline {
+    color:aquamarine;
+    font-weight: bold;
+    font-size:xx-large;
+    max-width:800px;
+    display:block;
+    margin: 0 auto;
+    line-height: 1.5em;
+}
+#x-1 {
+    color:rgb(172, 172, 172);
+}
+#x0 {
+    color:rgb(245, 136, 117);
+}
+#x1 {
+    color:rgb(255, 244, 179);
+}
+#x2 {
+    color:aquamarine;
+}
+#x3 {
+    color:lightblue;
+}
+#x4 {
+    color:rgb(217, 173, 230);
+}
+
+/** Social Button CSS **/
+
+.share-btn {
+    display: inline-block;
+    color: #ffffff;
+    border: none;
+    padding: 0.1em 0.6em;
+    outline: none;
+    text-align: center;
+    font-size: 0.9em;
+    margin: 0 0.2em;
+  }
+  
+  .share-btn:focus,
+  .share-btn:hover {
+    text-decoration: none;
+    opacity: 0.8;
+  }
+  
+  .share-btn:active {
+    color: #e2e2e2;
+  }
+  
+  .share-btn.twitter     { background: #55acee; }
+  .share-btn.google-plus { background: #dd4b39; }
+  .share-btn.facebook    { background: #3B5998; }
+  .share-btn.stumbleupon { background: #EB4823; }
+  .share-btn.reddit      { background: #ff5700; }
+  .share-btn.linkedin    { background: #4875B4; }
+  .share-btn.email       { background: #444444; }
+

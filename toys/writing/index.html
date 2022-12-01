@@ -2,64 +2,12 @@
 
 <head>
   <title>Writing Prompt Generator</title>
-  <style>
-    body {
-      text-align: center;
-      background: #353133;
-      color: white;
-      padding-top:90px;
-      font-family:Georgia, 'Times New Roman', Times, serif;
-    }
-    button {
-      background-color:rgb(70, 197, 87);
-      font-size:1.7em;
-      border: 0px;
-      padding:18px;
-      border-radius:15px;
-      text-transform: uppercase;
-      font-weight:bold;
-      font-family:'Courier New', Courier, monospace;
-    }
-    button:hover {
-      background-color:rgb(73, 114, 85);
-      color:white;
-    }
-    h1,h2,h3,h4,h5,h6 {
-      font-weight:normal;
-    }
-    #headline {
-      color:aquamarine;
-      font-weight: bold;
-      font-size:xx-large;
-      max-width:800px;
-      display:block;
-      margin: 0 auto;
-      line-height: 1.5em;
-    }
-    #x-1 {
-      color:rgb(172, 172, 172);
-    }
-    #x0 {
-      color:rgb(245, 136, 117);
-    }
-    #x1 {
-      color:rgb(255, 244, 179);
-    }
-    #x2 {
-      color:aquamarine;
-    }
-    #x3 {
-      color:lightblue;
-    }
-    #x4 {
-      color:rgb(217, 173, 230);
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
   <script src="script.js"></script>
 </head>
-<body>
+<body onload="makeLink()">
   <h1>Tell me a story!</h1>
-  <h2>Writing Prompt Generator</h2>
+  <h2>Writing Prompt Generator to make 2,033,737,200 unique stories!</h2>
   <br height="100px" />
 
   <!-- <hr width="300px" style="margin:50px auto" /> -->
@@ -75,6 +23,37 @@
     <span id="x3">verb</span><span style="color:white"> + </span>
     <span id="x4">qualifier</span>
   </p>
+
+  <br />
+  <br />
+  <br />
+  <h2>Share with friends:</h2>
+
+  <!-- Twitter (url, text, @mention) -->
+<a id="twitter" class="share-btn twitter" href="https://twitter.com/share?url=frankenstory.com&text=SHARETEXT&via=chequecipote">
+  Twitter
+</a>
+
+<!-- Facebook (url) -->
+<a id="facebook" class="share-btn facebook" href="https://www.facebook.com/sharer/sharer.php?u=frankenstory.com">
+  Facebook
+</a>
+
+<!-- Reddit (url, title) -->
+<a id="reddit" class="share-btn reddit" href="https://reddit.com/submit?url=frankenstory.com&title=SHARETEXT">
+  Reddit
+</a>
+
+<!-- LinkedIn (url, title, summary, source url) -->
+<a id="linkedin" class="share-btn linkedin" href="https://www.linkedin.com/shareArticle?url=frankenstory.com&title=A%20Fun%20Writing%20Prompt%20Generator&summary=SHARETEXT&source=frankenstory.com">
+  LinkedIn
+</a>
+
+<!-- Email (subject, body) -->
+<a id="email" class="share-btn email" href="mailto:?subject=A%20Fun%20Writing%20Prompt%20Generator&body=SHARETEXT">
+  Email
+</a>
+
 </body>
 
 </html>
