@@ -1,4 +1,5 @@
-const intro = ["Sorry, I can't...",
+const intro = [
+  "Sorry, I can't...",
   "I'd love to, but",
   "As fun as that sounds,",
   "I feel awful, but",
@@ -10,9 +11,13 @@ const intro = ["Sorry, I can't...",
   "I wish I could make it, it's just that",
   "I wish I could, but",
   "I regret to inform you that I cannot make it because",
-  "You're on your own -"
+  "You're on your own --",
+  "I already told you, I can't because",
+  "Didn't you hear? I'm all tied up since"
   ]
-const scape = ["my nephew with rabies",
+
+const scape = [
+  "my nephew with rabies",
   "Hitler's third nipple",
   "the Pope",
   "my ex",
@@ -36,8 +41,22 @@ const scape = ["my nephew with rabies",
   "the mafia",
   "my liberal neighbor",
   "Michael Scott",
-  "some kid named George"]
-const excus = ["needs a ride to a colonoscopy",
+  "some kid",
+  "a drunk politician",
+  "Eric from That 70s Show",
+  "my secret admirer",
+  "some sorry excuse for a hot dog vendor",
+  "Hannah Montana",
+  "the unfortunate child of two spiteful lovers",
+  "a middle school gym teacher",
+  "a Chia Pet",
+  "my imaginary friend",
+  "my other best friend",
+  "my aunt Sue"
+]
+
+const excus = [
+  "needs a ride to a colonoscopy",
   "ended up in jail again",
   "just died in my arms",
   "is starting a career in stand-up comedy",
@@ -73,7 +92,26 @@ const excus = ["needs a ride to a colonoscopy",
   "ended up on local news",
   "is getting a manicure",
   "burned my hand on a charcoal grill",
-  "told me not to"]
+  "told me not to",
+  "is holding me for ransom",
+  "hacked into the government",
+  "converted to Mormonism",
+  "is auditioning for a Beatles impersonator band",
+  "is teaching me how to drive a forklift",
+  "prank-called the FBI and now I have to bail them out",
+  "went streaking",
+  "is helping me sell my soul to Corporate America",
+  "opened a swanky bar downtown",
+  "broke my key off in my doorknob... now I'll never be able to leave home",
+  "is writing a medley of classic rock songs",
+  "moved to Turkey",
+  "is making squash for dinner",
+  "invited me to the Nissan Sign-and-Drive Sales Event",
+  "is literally sitting in my living room watching Friends right now",
+  "says you're a liar",
+  "just dumped me",
+  "... you know what? Forget it. You don't care anyway"
+]
 
 function makeExcuse() {
 
